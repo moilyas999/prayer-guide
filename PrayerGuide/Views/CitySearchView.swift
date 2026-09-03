@@ -16,7 +16,7 @@ struct CitySearchView: View {
             List {
                 if query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     Section {
-                        Text("Search any city. The list is stored on this device and covers every country.")
+                        Text("Type a city. The list stays on this iPhone.")
                             .font(.subheadline)
                             .foregroundStyle(Palette.muted)
                             .listRowBackground(Color.clear)
@@ -41,7 +41,7 @@ struct CitySearchView: View {
                                 Spacer()
                                 if city.id == settings.selectedCityID, !settings.usesDeviceLocation {
                                     Image(systemName: "checkmark")
-                                        .foregroundStyle(Palette.leaf)
+                                        .foregroundStyle(Palette.dusk)
                                 }
                             }
                         }

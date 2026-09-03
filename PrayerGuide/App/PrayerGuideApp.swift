@@ -7,6 +7,7 @@ struct PrayerGuideApp: App {
     @StateObject private var model: TodayModel
 
     init() {
+        NotificationScheduler.installDelegate()
         let settings = SettingsStore()
         let location = LocationService()
         _settings = StateObject(wrappedValue: settings)
@@ -20,7 +21,7 @@ struct PrayerGuideApp: App {
                 .environmentObject(settings)
                 .environmentObject(location)
                 .environmentObject(model)
-                .tint(Palette.leaf)
+                .tint(Palette.dusk)
                 .onAppear {
                     if settings.usesDeviceLocation {
                         location.requestWhenInUse()

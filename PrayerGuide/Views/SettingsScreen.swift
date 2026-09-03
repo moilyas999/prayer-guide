@@ -12,12 +12,6 @@ struct SettingsScreen: View {
             Form {
                 Section {
                     Toggle("Use my location", isOn: $settings.usesDeviceLocation)
-                        .onChange(of: settings.usesDeviceLocation) { _, enabled in
-                            if enabled {
-                                location.requestWhenInUse()
-                            }
-                            model.refreshPlaceAndTimes()
-                        }
                     if let message = location.lastError, settings.usesDeviceLocation {
                         Text(message)
                             .font(.footnote)
@@ -48,8 +42,6 @@ struct SettingsScreen: View {
                         .font(.footnote)
                         .foregroundStyle(Palette.muted)
                 }
-                .onChange(of: settings.method) { _, _ in model.refreshPlaceAndTimes() }
-                .onChange(of: settings.madhhab) { _, _ in model.refreshPlaceAndTimes() }
 
                 Section("Display") {
                     Picker("Clock", selection: $settings.uses24HourClock) {
@@ -59,35 +51,33 @@ struct SettingsScreen: View {
                     .pickerStyle(.segmented)
                 }
 
-                Section("Notifications") {
-                    Toggle("Remind me at prayer time", isOn: $settings.notificationsEnabled)
-                        .onChange(of: settings.notificationsEnabled) { _, enabled in
-                            Task {
-                                if enabled {
-                                    let allowed = await NotificationScheduler.requestPermission()
-                                    if !allowed {
-                                        notificationDenied = true
-                                        settings.notificationsEnabled = false
-                                    }
-                                }
-                                model.refreshPlaceAndTimes()
+                Section("Alerts") {
+                    Toggle("Prayer alerts", isOn: $settings.notificationsEnabled)
+                    if settings.notificationsEnabled {
+                        Picker("When", selection: $settings.alertLead) {
+                            ForEach(AlertLeadTime.allCases) { lead in
+                                Text(lead.title).tag(lead)
                             }
                         }
+                        ForEach(SalahName.allCases) { name in
+                            Toggle(name.title, isOn: settings.binding(for: name))
+                        }
+                    }
                     if notificationDenied {
-                        Text("Notifications are switched off in iOS Settings.")
+                        Text("Notifications are switched off in iOS Settings. My Five cannot show alerts until you allow them.")
                             .font(.footnote)
                             .foregroundStyle(Palette.muted)
                     } else {
-                        Text("A local reminder at each of the five times. Nothing is sent to a server.")
+                        Text("Local reminders on this iPhone only. My Five does not use a push server, and nothing is sent anywhere. If iOS asks for permission, that is only so these on-device alerts can appear. The next seven days are scheduled, then refreshed when you open the app or change a setting.")
                             .font(.footnote)
                             .foregroundStyle(Palette.muted)
                     }
                 }
 
                 Section("About") {
-                    LabeledContent("App", value: "Prayer Guide")
+                    LabeledContent("App", value: AppCopy.name)
                     LabeledContent("Company", value: "DeskLink.ai")
-                    LabeledContent("Version", value: "1.0 (1)")
+                    LabeledContent("Version", value: Self.versionLabel)
                     Text("Completely free. No adverts, no purchases, no accounts, and no analytics. Prayer times are calculated on your iPhone from a shipped city list.")
                         .font(.footnote)
                         .foregroundStyle(Palette.muted)
@@ -100,6 +90,35 @@ struct SettingsScreen: View {
                     Button("Done") { dismiss() }
                 }
             }
+            .onChange(of: settings.usesDeviceLocation) { _, enabled in
+                if enabled {
+                    location.requestWhenInUse()
+                }
+                model.refreshPlaceAndTimes()
+            }
+            .onChange(of: settings.method) { _, _ in model.refreshPlaceAndTimes() }
+            .onChange(of: settings.madhhab) { _, _ in model.refreshPlaceAndTimes() }
+            .onChange(of: settings.uses24HourClock) { _, _ in model.refreshPlaceAndTimes() }
+            .onChange(of: settings.alertLead) { _, _ in model.refreshPlaceAndTimes() }
+            .onChange(of: settings.enabledAlerts) { _, _ in model.refreshPlaceAndTimes() }
+            .onChange(of: settings.notificationsEnabled) { _, enabled in
+                Task {
+                    if enabled {
+                        let allowed = await NotificationScheduler.requestPermission()
+                        if !allowed {
+                            notificationDenied = true
+                            settings.notificationsEnabled = false
+                        }
+                    }
+                    model.refreshPlaceAndTimes()
+                }
+            }
         }
+    }
+
+    private static var versionLabel: String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "3"
+        return "\(version) (\(build))"
     }
 }

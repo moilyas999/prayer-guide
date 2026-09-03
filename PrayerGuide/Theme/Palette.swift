@@ -1,13 +1,18 @@
 import SwiftUI
 
+enum AppCopy {
+    static let name = "My Five"
+}
+
 enum Palette {
-    static let canvas = Color(red: 0.94, green: 0.96, blue: 0.93)
-    static let card = Color.white
-    static let ink = Color(red: 0.10, green: 0.18, blue: 0.15)
-    static let muted = Color(red: 0.35, green: 0.42, blue: 0.38)
-    static let leaf = Color(red: 0.07, green: 0.36, blue: 0.24)
-    static let leafSoft = Color(red: 0.16, green: 0.48, blue: 0.34)
-    static let highlight = Color(red: 0.86, green: 0.94, blue: 0.88)
+    /// Warm linen paper. Quiet, not a branded green or gold theme.
+    static let canvas = Color(red: 0.965, green: 0.949, blue: 0.922)
+    static let ink = Color(red: 0.145, green: 0.125, blue: 0.102)
+    static let muted = Color(red: 0.45, green: 0.40, blue: 0.35)
+    static let dusk = Color(red: 0.27, green: 0.31, blue: 0.41)
+    static let highlight = Color(red: 0.91, green: 0.875, blue: 0.81)
+    static let hairline = Color(red: 0.80, green: 0.75, blue: 0.68)
+    static let cityFill = Color(red: 0.988, green: 0.978, blue: 0.958)
 }
 
 enum British {
@@ -18,6 +23,14 @@ enum British {
         formatter.locale = locale
         formatter.dateFormat = uses24Hour ? "HH:mm" : "h:mm a"
         return formatter
+    }
+
+    static func shortGregorian(_ date: Date, timeZone: TimeZone) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "d MMM"
+        return formatter.string(from: date)
     }
 
     static func gregorianDate(_ date: Date, timeZone: TimeZone) -> String {

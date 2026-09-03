@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A01C64A84FD7D6AA4F2F900F /* PrayerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CCAE851145C93BE7FFA8D /* PrayerGuideApp.swift */; };
-		49FD4281FE5F678236060F8E /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2B48E7994B8FB92EAD312E /* TodayView.swift */; };
-		B6CA1AE8DBDF7436652FC431 /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A754263FDFE37B4B4B2BD4 /* CitySearchView.swift */; };
-		E52B7D6BD9D3B3DB874F8428 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8CE0405EFF8C322EC2B91 /* SettingsScreen.swift */; };
-		FAE422A6D58769AEFFC10D9E /* PrayerTimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BD502AAB5706545CD1E75 /* PrayerTimeEngine.swift */; };
-		C1206ACB507D5D5851245D6B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6083C131B877C2ED53133 /* City.swift */; };
-		11003C5DF5E78715711C34C4 /* CityCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D143E77923BD42BA0EF2795 /* CityCatalog.swift */; };
-		D9AA2C21B4541014B5BDEDA0 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E8D920962C126E927A9BA /* SettingsStore.swift */; };
-		83151F081578D3FA086237C3 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB281D870E261EC05F0EE53B /* LocationService.swift */; };
-		69137E035531EBF0750408E0 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACAE8C0FEB484A68AB3DA40 /* NotificationScheduler.swift */; };
-		6149245855531243B77C4B25 /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A13D0C1D57F0F82BCFA414 /* TodayModel.swift */; };
-		DCBAE6CA3C31D1E3817CB900 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F756DA4CB47017A58F1CB /* Palette.swift */; };
-		34BA66EA7FD2D13C83BE769B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2062A7A4CD58571DE9D7FBC1 /* Assets.xcassets */; };
-		965AC6CA25D3BC43651C4170 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D4FE38E2584573E6FC3F1844 /* PrivacyInfo.xcprivacy */; };
-		E420AE21EA92C033D06D8D65 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 861EE78C51655AE455D270F9 /* cities.json */; };
-		2FC6CFFC8D590F8E6A83480A /* PrayerTimeEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */; };
-		2817E2E2807F1B84E0BD9E81 /* CityCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */; };
+		1EB6C53FE4B3B76CA2572CC0 /* PrayerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CCAE851145C93BE7FFA8D /* PrayerGuideApp.swift */; };
+		F68DF58813821165964BC1D5 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2B48E7994B8FB92EAD312E /* TodayView.swift */; };
+		46ADE2E702DB47A0042189C8 /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A754263FDFE37B4B4B2BD4 /* CitySearchView.swift */; };
+		A5FF006FC3748C2B072292EF /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8CE0405EFF8C322EC2B91 /* SettingsScreen.swift */; };
+		511718D2DC98EC0B9AC568D4 /* CityCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D143E77923BD42BA0EF2795 /* CityCatalog.swift */; };
+		92A5871E92A0C93F7CCC483E /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192E8D920962C126E927A9BA /* SettingsStore.swift */; };
+		B2AEF611F01935D00EDD3406 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB281D870E261EC05F0EE53B /* LocationService.swift */; };
+		7D63682FB8F5BBA01D382EAE /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACAE8C0FEB484A68AB3DA40 /* NotificationScheduler.swift */; };
+		E165F2A341803E5E0C69B9B8 /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A13D0C1D57F0F82BCFA414 /* TodayModel.swift */; };
+		917E5E5F0BED7B25BC08E2F6 /* PrayerAlertPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619D0567E620AEE94D468AF /* PrayerAlertPlan.swift */; };
+		8F1275163FBB37FB44172ED9 /* MyFiveIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F05AFF240B66BC03A6AAC2 /* MyFiveIntents.swift */; };
+		AC1684B7E0446A772D6812E9 /* PrayerTimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BD502AAB5706545CD1E75 /* PrayerTimeEngine.swift */; };
+		E6C20F38EF54E7E65BE7364D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6083C131B877C2ED53133 /* City.swift */; };
+		2A92CB235E796D373B36820C /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F756DA4CB47017A58F1CB /* Palette.swift */; };
+		8FC3EA58816D953F5D0CF3C4 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2B43E1DB4121BB52F2EBC /* SharedPreferences.swift */; };
+		EE9D7A0C3345B9A689266CA8 /* PrayerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08DCB818AFEC7B98A75D249 /* PrayerSnapshot.swift */; };
+		8B4349EF0E52C0EC9B7F2BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2062A7A4CD58571DE9D7FBC1 /* Assets.xcassets */; };
+		658EBA8CE3AD785D1F9C94B9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D4FE38E2584573E6FC3F1844 /* PrivacyInfo.xcprivacy */; };
+		D68BDEA1E58B0E979BB36E74 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 861EE78C51655AE455D270F9 /* cities.json */; };
+		530C62FA314A05D76E173A08 /* MyFiveWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC0852E90E034B7F8AF488 /* MyFiveWidgetBundle.swift */; };
+		869A054EAF511F1145962DDB /* NextPrayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F60F9B7466BA66225DA52 /* NextPrayerWidget.swift */; };
+		3DF6ACE50D6D40DFF7868599 /* TodayPrayersWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA6B08A57E4131D91956C9 /* TodayPrayersWidget.swift */; };
+		EC614FED95574F57FA07C18F /* PrayerTimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BD502AAB5706545CD1E75 /* PrayerTimeEngine.swift */; };
+		6EF67D664852A4370DE91070 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6083C131B877C2ED53133 /* City.swift */; };
+		0872ADA1840F74697E5DEB87 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F756DA4CB47017A58F1CB /* Palette.swift */; };
+		80A5318F2006D73BF0E13C75 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2B43E1DB4121BB52F2EBC /* SharedPreferences.swift */; };
+		D53A5EDF49099AE02F144692 /* PrayerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08DCB818AFEC7B98A75D249 /* PrayerSnapshot.swift */; };
+		F5ACF36155FC9C24419FCEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770E41248E47FDFE2C0121FC /* Assets.xcassets */; };
+		17A3B8224464C934C283C23D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7CF1E711FFF06841C44B9CB2 /* PrivacyInfo.xcprivacy */; };
+		4823B38152121521F941ED1F /* PrayerTimeEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */; };
+		06A1BF25A1FC0A1FBF4526E2 /* CityCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */; };
+		A735DEF58AB9F28A9BB8E8BA /* PrayerAlertPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3A79169494B3977A0899C /* PrayerAlertPlanTests.swift */; };
+		85CC0E746FF8B717E0600413 /* MyFiveWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B57B0C87A58442C489D3141 /* MyFiveWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,28 +50,63 @@
 			remoteGlobalIDString = CCD1BDFE40AA20836710EC01;
 			remoteInfo = PrayerGuide;
 		};
+		EE75F2064180905B610A7AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADEAF5E167D4943BE484764E;
+			remoteInfo = MyFiveWidgets;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		060C35239F908B8E4EB554F4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				85CC0E746FF8B717E0600413 /* MyFiveWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E96CCAE851145C93BE7FFA8D /* PrayerGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerGuideApp.swift; sourceTree = "<group>"; };
 		6D2B48E7994B8FB92EAD312E /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		74A754263FDFE37B4B4B2BD4 /* CitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchView.swift; sourceTree = "<group>"; };
 		E8A8CE0405EFF8C322EC2B91 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
-		7E3BD502AAB5706545CD1E75 /* PrayerTimeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeEngine.swift; sourceTree = "<group>"; };
-		2CE6083C131B877C2ED53133 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		6D143E77923BD42BA0EF2795 /* CityCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCatalog.swift; sourceTree = "<group>"; };
 		192E8D920962C126E927A9BA /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		FB281D870E261EC05F0EE53B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		DACAE8C0FEB484A68AB3DA40 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		59A13D0C1D57F0F82BCFA414 /* TodayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModel.swift; sourceTree = "<group>"; };
+		B619D0567E620AEE94D468AF /* PrayerAlertPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerAlertPlan.swift; sourceTree = "<group>"; };
+		66F05AFF240B66BC03A6AAC2 /* MyFiveIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFiveIntents.swift; sourceTree = "<group>"; };
+		7E3BD502AAB5706545CD1E75 /* PrayerTimeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeEngine.swift; sourceTree = "<group>"; };
+		2CE6083C131B877C2ED53133 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		D53F756DA4CB47017A58F1CB /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		56D2B43E1DB4121BB52F2EBC /* SharedPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
+		E08DCB818AFEC7B98A75D249 /* PrayerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSnapshot.swift; sourceTree = "<group>"; };
+		91DC0852E90E034B7F8AF488 /* MyFiveWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFiveWidgetBundle.swift; sourceTree = "<group>"; };
+		D04F60F9B7466BA66225DA52 /* NextPrayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPrayerWidget.swift; sourceTree = "<group>"; };
+		D0FA6B08A57E4131D91956C9 /* TodayPrayersWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPrayersWidget.swift; sourceTree = "<group>"; };
 		2062A7A4CD58571DE9D7FBC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4FE38E2584573E6FC3F1844 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		861EE78C51655AE455D270F9 /* cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		770E41248E47FDFE2C0121FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CF1E711FFF06841C44B9CB2 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CDB628049BD29D8D7BC303B1 /* PrayerGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerGuide.entitlements; sourceTree = "<group>"; };
+		F424DC4E356CC14C7A5DE297 /* MyFiveWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFiveWidgets.entitlements; sourceTree = "<group>"; };
+		0967D1EF9FE20F04AE99D9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeEngineTests.swift; sourceTree = "<group>"; };
 		867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCatalogTests.swift; sourceTree = "<group>"; };
+		ECF3A79169494B3977A0899C /* PrayerAlertPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerAlertPlanTests.swift; sourceTree = "<group>"; };
 		5718BA8B2965F0F686C8E55B /* PrayerGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D1F151250A9FF7B6372D46 /* PrayerGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B57B0C87A58442C489D3141 /* MyFiveWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyFiveWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +124,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B4C0FBD7B26C24C775EFBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9043D6837166F1191C814862 /* MyFiveWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				770E41248E47FDFE2C0121FC /* Assets.xcassets */, 0967D1EF9FE20F04AE99D9AF /* Info.plist */, 91DC0852E90E034B7F8AF488 /* MyFiveWidgetBundle.swift */, F424DC4E356CC14C7A5DE297 /* MyFiveWidgets.entitlements */, D04F60F9B7466BA66225DA52 /* NextPrayerWidget.swift */, 7CF1E711FFF06841C44B9CB2 /* PrivacyInfo.xcprivacy */, D0FA6B08A57E4131D91956C9 /* TodayPrayersWidget.swift */,
+			);
+			path = MyFiveWidgets;
+			sourceTree = "<group>";
+		};
 		E84741C3BD10AEB2D935A4F5 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +158,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		C6560E36E0C7EEE508ACEED9 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				66F05AFF240B66BC03A6AAC2 /* MyFiveIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
 		87C345EB7C671EF3C7BCA459 /* PrayerTimes */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +177,7 @@
 		01BB51E97A1322B13D685566 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2062A7A4CD58571DE9D7FBC1 /* Assets.xcassets */, D4FE38E2584573E6FC3F1844 /* PrivacyInfo.xcprivacy */,
+				2062A7A4CD58571DE9D7FBC1 /* Assets.xcassets */, CDB628049BD29D8D7BC303B1 /* PrayerGuide.entitlements */, D4FE38E2584573E6FC3F1844 /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,6 +188,14 @@
 				FB281D870E261EC05F0EE53B /* LocationService.swift */, DACAE8C0FEB484A68AB3DA40 /* NotificationScheduler.swift */, 192E8D920962C126E927A9BA /* SettingsStore.swift */, 59A13D0C1D57F0F82BCFA414 /* TodayModel.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		363DF75FA091A912B8DD0544 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B619D0567E620AEE94D468AF /* PrayerAlertPlan.swift */, E08DCB818AFEC7B98A75D249 /* PrayerSnapshot.swift */, 56D2B43E1DB4121BB52F2EBC /* SharedPreferences.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		183ACDE68BFD9D22159C169C /* Theme */ = {
@@ -135,7 +217,7 @@
 		CD37200B59E6DFD535ADC14F /* PrayerGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */, 8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */,
+				867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */, ECF3A79169494B3977A0899C /* PrayerAlertPlanTests.swift */, 8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */,
 			);
 			path = PrayerGuideTests;
 			sourceTree = "<group>";
@@ -144,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1DF401F405384E02A0BF02D3 /* PrayerGuide */,
+				9043D6837166F1191C814862 /* MyFiveWidgets */,
 				12E9DF2F0820E9F612A165AB /* PrayerGuideTests */,
 				FBDC4F23F93125BBEEAE800C /* Products */,
 			);
@@ -153,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				5718BA8B2965F0F686C8E55B /* PrayerGuide.app */,
+				1B57B0C87A58442C489D3141 /* MyFiveWidgets.appex */,
 				87D1F151250A9FF7B6372D46 /* PrayerGuideTests.xctest */,
 			);
 			name = Products;
@@ -161,7 +245,7 @@
 		1DF401F405384E02A0BF02D3 /* PrayerGuide */ = {
 			isa = PBXGroup;
 			children = (
-				E84741C3BD10AEB2D935A4F5 /* App */, 178C83D1A416FEF0AEAF8D6C /* Data */, 87C345EB7C671EF3C7BCA459 /* PrayerTimes */, 01BB51E97A1322B13D685566 /* Resources */, 5535A37B65FC651D8190848A /* Services */, 183ACDE68BFD9D22159C169C /* Theme */, AF1AA48A008E6C7BB913B66E /* Views */,
+				E84741C3BD10AEB2D935A4F5 /* App */, 178C83D1A416FEF0AEAF8D6C /* Data */, C6560E36E0C7EEE508ACEED9 /* Intents */, 87C345EB7C671EF3C7BCA459 /* PrayerTimes */, 01BB51E97A1322B13D685566 /* Resources */, 5535A37B65FC651D8190848A /* Services */, 363DF75FA091A912B8DD0544 /* Shared */, 183ACDE68BFD9D22159C169C /* Theme */, AF1AA48A008E6C7BB913B66E /* Views */,
 			);
 			path = PrayerGuide;
 			sourceTree = "<group>";
@@ -169,7 +253,7 @@
 		12E9DF2F0820E9F612A165AB /* PrayerGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */, 867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */,
+				8DD7847868199EB22041EEA9 /* PrayerTimeEngineTests.swift */, 867FD8C40AE739F47E4FBC0C /* CityCatalogTests.swift */, ECF3A79169494B3977A0899C /* PrayerAlertPlanTests.swift */,
 			);
 			path = PrayerGuideTests;
 			sourceTree = "<group>";
@@ -185,10 +269,12 @@
 				DE54E274973760DB10C0103F /* Sources */,
 				8226845DD06A9803C9F1E0E1 /* Frameworks */,
 				3073F9BACE8365BB56700AF3 /* Resources */,
+				060C35239F908B8E4EB554F4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				72E518DB56FE0DD55F893E7D /* PBXTargetDependency */,
 			);
 			name = PrayerGuide;
 			productName = PrayerGuide;
@@ -212,6 +298,23 @@
 			productReference = 87D1F151250A9FF7B6372D46 /* PrayerGuideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ADEAF5E167D4943BE484764E /* MyFiveWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B5ABFB48DBEAE075A34390 /* Build configuration list for PBXNativeTarget "MyFiveWidgets" */;
+			buildPhases = (
+				FBE9117EB1A601F6D94ED27D /* Sources */,
+				6B4C0FBD7B26C24C775EFBC5 /* Frameworks */,
+				4E00C9015D9765EE6534B42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFiveWidgets;
+			productName = MyFiveWidgets;
+			productReference = 1B57B0C87A58442C489D3141 /* MyFiveWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,6 +331,9 @@
 					261EC7E8302EBAF96062E8C8 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = CCD1BDFE40AA20836710EC01;
+					};
+					ADEAF5E167D4943BE484764E = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -246,6 +352,7 @@
 			projectRoot = "";
 			targets = (
 				CCD1BDFE40AA20836710EC01 /* PrayerGuide */,
+				ADEAF5E167D4943BE484764E /* MyFiveWidgets */,
 				261EC7E8302EBAF96062E8C8 /* PrayerGuideTests */,
 			);
 		};
@@ -256,9 +363,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34BA66EA7FD2D13C83BE769B /* Assets.xcassets in Resources */,
-				965AC6CA25D3BC43651C4170 /* PrivacyInfo.xcprivacy in Resources */,
-				E420AE21EA92C033D06D8D65 /* cities.json in Resources */,
+				8B4349EF0E52C0EC9B7F2BFF /* Assets.xcassets in Resources */,
+				658EBA8CE3AD785D1F9C94B9 /* PrivacyInfo.xcprivacy in Resources */,
+				D68BDEA1E58B0E979BB36E74 /* cities.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E00C9015D9765EE6534B42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ACF36155FC9C24419FCEDC /* Assets.xcassets in Resources */,
+				17A3B8224464C934C283C23D /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,18 +385,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01C64A84FD7D6AA4F2F900F /* PrayerGuideApp.swift in Sources */,
-				49FD4281FE5F678236060F8E /* TodayView.swift in Sources */,
-				B6CA1AE8DBDF7436652FC431 /* CitySearchView.swift in Sources */,
-				E52B7D6BD9D3B3DB874F8428 /* SettingsScreen.swift in Sources */,
-				FAE422A6D58769AEFFC10D9E /* PrayerTimeEngine.swift in Sources */,
-				C1206ACB507D5D5851245D6B /* City.swift in Sources */,
-				11003C5DF5E78715711C34C4 /* CityCatalog.swift in Sources */,
-				D9AA2C21B4541014B5BDEDA0 /* SettingsStore.swift in Sources */,
-				83151F081578D3FA086237C3 /* LocationService.swift in Sources */,
-				69137E035531EBF0750408E0 /* NotificationScheduler.swift in Sources */,
-				6149245855531243B77C4B25 /* TodayModel.swift in Sources */,
-				DCBAE6CA3C31D1E3817CB900 /* Palette.swift in Sources */,
+				1EB6C53FE4B3B76CA2572CC0 /* PrayerGuideApp.swift in Sources */,
+				F68DF58813821165964BC1D5 /* TodayView.swift in Sources */,
+				46ADE2E702DB47A0042189C8 /* CitySearchView.swift in Sources */,
+				A5FF006FC3748C2B072292EF /* SettingsScreen.swift in Sources */,
+				511718D2DC98EC0B9AC568D4 /* CityCatalog.swift in Sources */,
+				92A5871E92A0C93F7CCC483E /* SettingsStore.swift in Sources */,
+				B2AEF611F01935D00EDD3406 /* LocationService.swift in Sources */,
+				7D63682FB8F5BBA01D382EAE /* NotificationScheduler.swift in Sources */,
+				E165F2A341803E5E0C69B9B8 /* TodayModel.swift in Sources */,
+				917E5E5F0BED7B25BC08E2F6 /* PrayerAlertPlan.swift in Sources */,
+				8F1275163FBB37FB44172ED9 /* MyFiveIntents.swift in Sources */,
+				AC1684B7E0446A772D6812E9 /* PrayerTimeEngine.swift in Sources */,
+				E6C20F38EF54E7E65BE7364D /* City.swift in Sources */,
+				2A92CB235E796D373B36820C /* Palette.swift in Sources */,
+				8FC3EA58816D953F5D0CF3C4 /* SharedPreferences.swift in Sources */,
+				EE9D7A0C3345B9A689266CA8 /* PrayerSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE9117EB1A601F6D94ED27D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530C62FA314A05D76E173A08 /* MyFiveWidgetBundle.swift in Sources */,
+				869A054EAF511F1145962DDB /* NextPrayerWidget.swift in Sources */,
+				3DF6ACE50D6D40DFF7868599 /* TodayPrayersWidget.swift in Sources */,
+				EC614FED95574F57FA07C18F /* PrayerTimeEngine.swift in Sources */,
+				6EF67D664852A4370DE91070 /* City.swift in Sources */,
+				0872ADA1840F74697E5DEB87 /* Palette.swift in Sources */,
+				80A5318F2006D73BF0E13C75 /* SharedPreferences.swift in Sources */,
+				D53A5EDF49099AE02F144692 /* PrayerSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC6CFFC8D590F8E6A83480A /* PrayerTimeEngineTests.swift in Sources */,
-				2817E2E2807F1B84E0BD9E81 /* CityCatalogTests.swift in Sources */,
+				4823B38152121521F941ED1F /* PrayerTimeEngineTests.swift in Sources */,
+				06A1BF25A1FC0A1FBF4526E2 /* CityCatalogTests.swift in Sources */,
+				A735DEF58AB9F28A9BB8E8BA /* PrayerAlertPlanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = CCD1BDFE40AA20836710EC01 /* PrayerGuide */;
 			targetProxy = D799BAE6088A90139B415FCC /* PBXContainerItemProxy */;
+		};
+		72E518DB56FE0DD55F893E7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADEAF5E167D4943BE484764E /* MyFiveWidgets */;
+			targetProxy = EE75F2064180905B610A7AAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -427,15 +568,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PrayerGuide/Resources/PrayerGuide.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Prayer Guide";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Five";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Prayer Guide uses your location only to calculate salah times for where you are. Times are worked out on this iPhone and are never sent anywhere. You can refuse and pick a city instead.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "My Five uses your location only to calculate salah times for where you are. Times are worked out on this iPhone and are never sent anywhere. You can refuse and pick a city instead.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,15 +601,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PrayerGuide/Resources/PrayerGuide.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Prayer Guide";
+				INFOPLIST_KEY_CFBundleDisplayName = "My Five";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Prayer Guide uses your location only to calculate salah times for where you are. Times are worked out on this iPhone and are never sent anywhere. You can refuse and pick a city instead.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "My Five uses your location only to calculate salah times for where you are. Times are worked out on this iPhone and are never sent anywhere. You can refuse and pick a city instead.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,7 +634,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -511,7 +654,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -523,6 +666,56 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrayerGuide.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrayerGuide";
+			};
+			name = Release;
+		};
+		B2449CC5E4C110B28DB6F50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyFiveWidgets/MyFiveWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyFiveWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Five";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@executable_path/../../Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.desklink.prayerguide.widgets;
+				PRODUCT_NAME = MyFiveWidgets;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A1DC914377F49283DE8E215A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyFiveWidgets/MyFiveWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyFiveWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Five";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@executable_path/../../Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.desklink.prayerguide.widgets;
+				PRODUCT_NAME = MyFiveWidgets;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -552,6 +745,15 @@
 			buildConfigurations = (
 				1DAA2CFFBF6E2812445B9A1F /* Debug */,
 				30C48ACA9D3ED5BF1ECACF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9B5ABFB48DBEAE075A34390 /* Build configuration list for PBXNativeTarget "MyFiveWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2449CC5E4C110B28DB6F50B /* Debug */,
+				A1DC914377F49283DE8E215A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

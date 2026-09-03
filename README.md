@@ -1,12 +1,12 @@
-# Prayer Guide
+# My Five
 
 Worldwide salah times for iPhone. Completely free. **DeskLink.ai**
 
 This is a new, standalone App Store listing. It is **not** Umrah Guide and **not** Instructor Go. Do not copy branding, assets, or copy from those apps, and **never change Instructor Go or Umrah Guide bundle IDs**.
 
-- **Display name:** Prayer Guide
+- **Display name:** My Five
 - **Bundle ID:** `ai.desklink.prayerguide` only
-- **Version:** 1.0 (build 1)
+- **Version:** 1.0 (build 3)
 - **Devices:** iPhone, iOS 17 or later
 - **Language:** English (United Kingdom)
 - **Signing in this repository:** `DEVELOPMENT_TEAM` is left empty. Automatic signing.
@@ -17,7 +17,7 @@ When you archive on a Mac:
 
 1. Open `PrayerGuide.xcodeproj` and select the **PrayerGuide** scheme.
 2. Signing & Capabilities → **Automatically manage signing**.
-3. Team: **Desklink LTD** (`C74BFDFLFD`). Do not put that team on Instructor Go or Umrah Guide, and do not change those apps’ identifiers.
+3. Team: **Desklink LTD** (`C74BFDFLFD`). Enable the App Group `group.ai.desklink.prayerguide` on the app and the MyFiveWidgets extension. Do not put that team on Instructor Go or Umrah Guide, and do not change those apps’ identifiers.
 4. Product → Archive → Distribute App → App Store Connect.
 5. Export compliance: the target sets `ITSAppUsesNonExemptEncryption` to `NO`.
 6. Privacy Policy URL (GitHub Pages from `docs/`): `https://moilyas999.github.io/prayer-guide/privacy.html`
@@ -27,13 +27,19 @@ Linux CI cannot compile this project. Build, test, and archive only on macOS.
 
 ## What the app does
 
-One calm home screen: today’s five prayers and a countdown to the next one. Large, readable times. Hijri date (Umm al-Qura) sits under the Gregorian date.
+One calm home screen: city, Hijri and Gregorian dates, a large next-prayer name with countdown, then the five times in a clear list. The current prayer is highlighted. Tap the city to search. Settings sit behind a small ••• control.
 
 Search a shipped worldwide city list (GeoNames, all countries, latitude and longitude). Times are calculated **on the device** with an Adhan-equivalent astronomical method. There is no live prayer-times API.
 
 Optional **Use my location** (When In Use). If the user declines, the city picker still works.
 
-Settings: calculation method (Muslim World League default, plus Egyptian, Umm al-Qura, ISNA, Karachi), Asr madhhab (standard or Hanafi), 12- or 24-hour clock, and optional local notifications at prayer time.
+Settings: calculation method (Muslim World League default, plus Egyptian, Umm al-Qura, ISNA, Karachi), Asr madhhab (standard or Hanafi), 12- or 24-hour clock, and local prayer alerts.
+
+Alerts stay on this iPhone. Each of the five prayers can be toggled, with a lead time of at the time, 5 minutes before, or 15 minutes before. Opening the app or changing city, method, or alert settings reschedules a week of `UNCalendarNotificationTrigger` items. There is no remote push server.
+
+Home and Lock Screen widgets use the same on-device calculation: a small next-prayer countdown and a medium list of today’s five times.
+
+Shortcuts and Siri can ask “What’s the next prayer?”, set a local reminder for the next prayer, or set reminders for the remaining prayers today. Those actions appear in the Shortcuts app. They schedule local notifications labelled as My Five alarms (not Clock app alarms).
 
 No Qibla, no Qur’an, no adverts, no in-app purchases, no accounts, no analytics, no tracking.
 
@@ -64,7 +70,8 @@ Use these answers in App Store Connect. They match `PrivacyInfo.xcprivacy`.
 
 ```
 PrayerGuide.xcodeproj/    Xcode project + shared PrayerGuide scheme
-PrayerGuide/              SwiftUI app (offline, no CocoaPods, no SPM)
+PrayerGuide/              SwiftUI app, App Intents, shared calculation
+MyFiveWidgets/            WidgetKit extension (small, medium, lock)
 PrayerGuideTests/         XCTest
 docs/                     GitHub Pages privacy and support
 scripts/                  City list, icon, and project generators
