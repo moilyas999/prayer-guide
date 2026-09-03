@@ -1,0 +1,15 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+*.xcuserstate
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.swiftpm/
+build/
+.idea/
+.venv/
+__pycache__/
+*.pyc
