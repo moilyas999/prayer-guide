@@ -7,6 +7,7 @@ struct PrayerGuideApp: App {
     @StateObject private var model: TodayModel
 
     init() {
+        NotificationScheduler.installDelegate()
         let settings = SettingsStore()
         let location = LocationService()
         _settings = StateObject(wrappedValue: settings)

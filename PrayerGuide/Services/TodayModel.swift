@@ -1,13 +1,10 @@
 import Combine
-import CoreLocation
 import Foundation
-import SwiftUI
+import WidgetKit
 
 @MainActor
 final class TodayModel: ObservableObject {
-    @Published private(set) var place: Place
-    @Published private(set) var today: DailyPrayers?
-    @Published private(set) var tomorrowFajr: Date?
+    @Published private(set) var snapshot: PrayerSnapshot
     @Published private(set) var now = Date()
 
     let settings: SettingsStore
@@ -16,11 +13,22 @@ final class TodayModel: ObservableObject {
 
     private var timer: AnyCancellable?
 
+    var place: Place { snapshot.place }
+    var today: DailyPrayers? { snapshot.today }
+    var next: (name: SalahName, time: Date)? { snapshot.next }
+    var current: SalahName? { snapshot.current }
+
     init(settings: SettingsStore, location: LocationService, catalog: CityCatalog = .shared) {
         self.settings = settings
         self.location = location
         self.catalog = catalog
-        self.place = Place.london
+        self.snapshot = PrayerSnapshot.make(
+            place: Place.london,
+            method: settings.method,
+            madhhab: settings.madhhab,
+            uses24HourClock: settings.uses24HourClock,
+            now: Date()
+        )
         refreshPlaceAndTimes()
         timer = Timer.publish(every: 15, on: .main, in: .common)
             .autoconnect()
@@ -30,60 +38,36 @@ final class TodayModel: ObservableObject {
                 self.now = date
                 if self.civilDay(date) != previousDay {
                     self.refreshPlaceAndTimes()
+                } else {
+                    self.snapshot = PrayerSnapshot(
+                        place: self.snapshot.place,
+                        today: self.snapshot.today,
+                        tomorrow: self.snapshot.tomorrow,
+                        uses24HourClock: self.settings.uses24HourClock,
+                        now: date
+                    )
                 }
             }
     }
 
     func refreshPlaceAndTimes() {
-        place = resolvePlace()
-        today = PrayerTimeEngine.times(
-            latitude: place.latitude,
-            longitude: place.longitude,
-            on: now,
-            timeZone: place.timeZone,
+        let place = resolvePlace()
+        SharedPreferences.savePlace(place)
+        snapshot = PrayerSnapshot.make(
+            place: place,
             method: settings.method,
-            madhhab: settings.madhhab
+            madhhab: settings.madhhab,
+            uses24HourClock: settings.uses24HourClock,
+            now: now
         )
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = place.timeZone
-        if let tomorrow = calendar.date(byAdding: .day, value: 1, to: now) {
-            tomorrowFajr = PrayerTimeEngine.times(
-                latitude: place.latitude,
-                longitude: place.longitude,
-                on: tomorrow,
-                timeZone: place.timeZone,
-                method: settings.method,
-                madhhab: settings.madhhab
-            )?.fajr
-        }
         Task {
-            await NotificationScheduler.apply(
-                enabled: settings.notificationsEnabled,
-                today: today,
-                tomorrowFajr: tomorrowFajr,
-                timeZone: place.timeZone
-            )
+            await NotificationScheduler.apply(now: now)
+            WidgetCenter.shared.reloadAllTimelines()
         }
-    }
-
-    var next: (name: SalahName, time: Date)? {
-        if let today, let upcoming = today.nextSalah(at: now) {
-            return upcoming
-        }
-        if let tomorrowFajr {
-            return (.fajr, tomorrowFajr)
-        }
-        return nil
-    }
-
-    var current: SalahName? {
-        today?.currentSalah(at: now)
     }
 
     func formatted(_ date: Date) -> String {
-        let formatter = British.clockFormat(uses24Hour: settings.uses24HourClock)
-        formatter.timeZone = place.timeZone
-        return formatter.string(from: date)
+        snapshot.formatted(date)
     }
 
     private func resolvePlace() -> Place {
@@ -122,7 +106,7 @@ final class TodayModel: ObservableObject {
 
     private func civilDay(_ date: Date) -> DateComponents {
         var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = place.timeZone
+        calendar.timeZone = snapshot.place.timeZone
         return calendar.dateComponents([.year, .month, .day], from: date)
     }
 }

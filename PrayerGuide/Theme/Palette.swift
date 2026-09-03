@@ -25,6 +25,14 @@ enum British {
         return formatter
     }
 
+    static func shortGregorian(_ date: Date, timeZone: TimeZone) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "d MMM"
+        return formatter.string(from: date)
+    }
+
     static func gregorianDate(_ date: Date, timeZone: TimeZone) -> String {
         let formatter = DateFormatter()
         formatter.locale = locale
