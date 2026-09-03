@@ -30,6 +30,9 @@ struct PrayerGuideApp: App {
                 .onChange(of: location.coordinate?.latitude) { _, _ in
                     model.refreshPlaceAndTimes()
                 }
+                .onChange(of: location.coordinate?.longitude) { _, _ in
+                    model.refreshPlaceAndTimes()
+                }
                 .onChange(of: location.authorization) { _, _ in
                     model.refreshPlaceAndTimes()
                 }

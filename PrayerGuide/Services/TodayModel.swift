@@ -25,7 +25,12 @@ final class TodayModel: ObservableObject {
         timer = Timer.publish(every: 15, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] date in
-                self?.now = date
+                guard let self else { return }
+                let previousDay = self.civilDay(self.now)
+                self.now = date
+                if self.civilDay(date) != previousDay {
+                    self.refreshPlaceAndTimes()
+                }
             }
     }
 
@@ -109,5 +114,11 @@ final class TodayModel: ObservableObject {
             )
         }
         return Place.london
+    }
+
+    private func civilDay(_ date: Date) -> DateComponents {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = place.timeZone
+        return calendar.dateComponents([.year, .month, .day], from: date)
     }
 }
