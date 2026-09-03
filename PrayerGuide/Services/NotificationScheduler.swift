@@ -43,7 +43,7 @@ enum NotificationScheduler {
         calendar.timeZone = timeZone
         let parts = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         let content = UNMutableNotificationContent()
-        content.title = "Prayer Guide"
+        content.title = AppCopy.name
         content.body = "It is time for \(name)."
         content.sound = .default
         content.categoryIdentifier = categoryID

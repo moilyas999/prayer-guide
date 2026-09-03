@@ -20,7 +20,7 @@ struct PrayerGuideApp: App {
                 .environmentObject(settings)
                 .environmentObject(location)
                 .environmentObject(model)
-                .tint(Palette.leaf)
+                .tint(Palette.dusk)
                 .onAppear {
                     if settings.usesDeviceLocation {
                         location.requestWhenInUse()

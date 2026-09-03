@@ -85,9 +85,9 @@ struct SettingsScreen: View {
                 }
 
                 Section("About") {
-                    LabeledContent("App", value: "Prayer Guide")
+                    LabeledContent("App", value: AppCopy.name)
                     LabeledContent("Company", value: "DeskLink.ai")
-                    LabeledContent("Version", value: "1.0 (1)")
+                    LabeledContent("Version", value: Self.versionLabel)
                     Text("Completely free. No adverts, no purchases, no accounts, and no analytics. Prayer times are calculated on your iPhone from a shipped city list.")
                         .font(.footnote)
                         .foregroundStyle(Palette.muted)
@@ -101,5 +101,11 @@ struct SettingsScreen: View {
                 }
             }
         }
+    }
+
+    private static var versionLabel: String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "2"
+        return "\(version) (\(build))"
     }
 }

@@ -98,6 +98,27 @@ final class PrayerTimeEngineTests: XCTestCase {
         }
     }
 
+    func testCurrentPrayerFollowsTheFiveWindows() {
+        let prayers = PrayerTimeEngine.times(
+            latitude: 51.50853,
+            longitude: -0.12574,
+            year: 2026,
+            month: 9,
+            day: 3,
+            method: .muslimWorldLeague,
+            madhhab: .standard
+        )
+        XCTAssertNotNil(prayers)
+        guard let prayers else { return }
+
+        XCTAssertNil(prayers.currentSalah(at: prayers.fajr.addingTimeInterval(-60)))
+        XCTAssertEqual(prayers.currentSalah(at: prayers.fajr.addingTimeInterval(60)), .fajr)
+        XCTAssertEqual(prayers.currentSalah(at: prayers.dhuhr.addingTimeInterval(60)), .dhuhr)
+        XCTAssertEqual(prayers.currentSalah(at: prayers.asr.addingTimeInterval(60)), .asr)
+        XCTAssertEqual(prayers.currentSalah(at: prayers.maghrib.addingTimeInterval(60)), .maghrib)
+        XCTAssertEqual(prayers.currentSalah(at: prayers.isha.addingTimeInterval(60)), .isha)
+    }
+
     private func clock(_ date: Date, _ timeZone: TimeZone) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_GB")

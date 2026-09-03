@@ -1,12 +1,12 @@
-# Prayer Guide
+# My Five
 
 Worldwide salah times for iPhone. Completely free. **DeskLink.ai**
 
 This is a new, standalone App Store listing. It is **not** Umrah Guide and **not** Instructor Go. Do not copy branding, assets, or copy from those apps, and **never change Instructor Go or Umrah Guide bundle IDs**.
 
-- **Display name:** Prayer Guide
+- **Display name:** My Five
 - **Bundle ID:** `ai.desklink.prayerguide` only
-- **Version:** 1.0 (build 1)
+- **Version:** 1.0 (build 2)
 - **Devices:** iPhone, iOS 17 or later
 - **Language:** English (United Kingdom)
 - **Signing in this repository:** `DEVELOPMENT_TEAM` is left empty. Automatic signing.
@@ -27,7 +27,7 @@ Linux CI cannot compile this project. Build, test, and archive only on macOS.
 
 ## What the app does
 
-One calm home screen: today’s five prayers and a countdown to the next one. Large, readable times. Hijri date (Umm al-Qura) sits under the Gregorian date.
+One calm home screen: city, Hijri and Gregorian dates, a large next-prayer name with countdown, then the five times in a clear list. The current prayer is highlighted. Tap the city to search. Settings sit behind a small ••• control.
 
 Search a shipped worldwide city list (GeoNames, all countries, latitude and longitude). Times are calculated **on the device** with an Adhan-equivalent astronomical method. There is no live prayer-times API.
 

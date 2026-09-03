@@ -76,6 +76,10 @@ final class TodayModel: ObservableObject {
         return nil
     }
 
+    var current: SalahName? {
+        today?.currentSalah(at: now)
+    }
+
     func formatted(_ date: Date) -> String {
         let formatter = British.clockFormat(uses24Hour: settings.uses24HourClock)
         formatter.timeZone = place.timeZone
