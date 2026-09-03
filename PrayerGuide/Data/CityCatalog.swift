@@ -10,8 +10,12 @@ struct CityCatalog {
            let data = try? Data(contentsOf: url) {
             self.init(jsonData: data)
         } else {
-            cities = []
+            self.init(cities: [])
         }
+    }
+
+    init(cities: [City]) {
+        self.cities = cities
     }
 
     init(jsonData: Data) {
@@ -20,10 +24,10 @@ struct CityCatalog {
             let countryMap = root["countries"] as? [String: String],
             let rows = root["cities"] as? [[Any]]
         else {
-            cities = []
+            self.init(cities: [])
             return
         }
-        cities = rows.compactMap { row in
+        self.init(cities: rows.compactMap { row in
             guard row.count >= 9 else { return nil }
             let values = row.map { item -> String in
                 if let text = item as? String { return text }
@@ -42,7 +46,7 @@ struct CityCatalog {
                 timeZoneIdentifier: values[7],
                 population: Int(values[8]) ?? 0
             )
-        }
+        })
     }
 
     func city(id: String) -> City? {
