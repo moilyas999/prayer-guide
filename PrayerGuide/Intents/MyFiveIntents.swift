@@ -3,7 +3,7 @@ import Foundation
 
 struct NextPrayerIntent: AppIntent {
     static var title: LocalizedStringResource = "What’s the next prayer?"
-    static var description = IntentDescription("Speak the next prayer name and time. Calculated on this iPhone.")
+    static var description = IntentDescription("Speak the next prayer name and time. Calculated on this device.")
     static var openAppWhenRun = false
 
     func perform() async throws -> some IntentResult & ProvidesDialog & ReturnsValue<String> {
@@ -15,7 +15,7 @@ struct NextPrayerIntent: AppIntent {
 
 struct SetAlarmForNextPrayerIntent: AppIntent {
     static var title: LocalizedStringResource = "Set alarm for next prayer"
-    static var description = IntentDescription("Schedules a local reminder on this iPhone for the next prayer. This is not a Clock app alarm.")
+    static var description = IntentDescription("Schedules a local reminder on this device for the next prayer. This is not a Clock app alarm.")
     static var openAppWhenRun = false
 
     func perform() async throws -> some IntentResult & ProvidesDialog {
@@ -32,7 +32,7 @@ struct SetAlarmForNextPrayerIntent: AppIntent {
         )
         if allowed {
             return .result(
-                dialog: "Local reminder set for \(next.name.title) at \(snapshot.formatted(next.time)). It stays on this iPhone and is not a Clock alarm."
+                dialog: "Local reminder set for \(next.name.title) at \(snapshot.formatted(next.time)). It stays on this device and is not a Clock alarm."
             )
         }
         return .result(dialog: "Allow notifications for My Five in iOS Settings to set a local reminder.")
@@ -41,7 +41,7 @@ struct SetAlarmForNextPrayerIntent: AppIntent {
 
 struct SetAlarmsForTodaysPrayersIntent: AppIntent {
     static var title: LocalizedStringResource = "Set alarms for today’s five prayers"
-    static var description = IntentDescription("Schedules local reminders on this iPhone for the remaining prayers today. These are not Clock app alarms.")
+    static var description = IntentDescription("Schedules local reminders on this device for the remaining prayers today. These are not Clock app alarms.")
     static var openAppWhenRun = false
 
     func perform() async throws -> some IntentResult & ProvidesDialog {
@@ -69,7 +69,7 @@ struct SetAlarmsForTodaysPrayersIntent: AppIntent {
             return .result(dialog: "Today’s five prayers have already passed.")
         }
         return .result(
-            dialog: "Local reminders set for \(list(names)). They stay on this iPhone and are not Clock alarms."
+            dialog: "Local reminders set for \(list(names)). They stay on this device and are not Clock alarms."
         )
     }
 
